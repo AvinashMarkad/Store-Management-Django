@@ -1,0 +1,15 @@
+{% extends 'store/base.html' %} {% block content %}
+<h2>{{ product.name }}</h2>
+<p>{{ product.description }}</p>
+<p>Price: ₹{{ product.price }}</p>
+<p>Quantity: {{ product.quantity }}</p>
+<p>Category: {{ product.get_category_display }}</p>
+{% if product.image %}
+<img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid" />
+{% endif %}
+<a href="{% url 'edit_product' product.pk %}" class="btn btn-warning">Edit</a>
+<a href="{% url 'delete_product' product.pk %}" class="btn btn-danger"
+  >Delete</a
+>
+<a href="{% url 'product_list' %}" class="btn btn-secondary">Back to List</a>
+{% endblock %}
