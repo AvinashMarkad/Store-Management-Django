@@ -1,0 +1,88 @@
+{% extends 'store/base.html' %}
+<!-- This must be the first line -->
+
+{% block content %}
+<div class="container text-center mt-5">
+  <h1 class="display-4">Welcome to the Refrigeration Store</h1>
+  <p class="lead">This is the home page of our store management system.</p>
+  <a href="{% url 'product_list' %}" class="btn btn-primary btn-lg"
+    >View Products</a
+  >
+</div>
+
+<!-- Optional: Add a Bootstrap Jumbotron or Hero Section -->
+<div
+  class="jumbotron jumbotron-fluid bg-light mt-5"
+  style="
+    background-image: url('https://images.unsplash.com/photo-1611095790444-1dfa35e37b52?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+  "
+>
+  <div class="container text-white text-center py-5">
+    <h2 class="display-5">Explore Our Refrigeration Solutions</h2>
+    <p class="lead">
+      We offer a wide range of refrigeration products to meet your needs.
+    </p>
+    <hr class="my-4 bg-white" />
+    <p>Check out our latest products and services.</p>
+    <a href="{% url 'product_list' %}" class="btn btn-success btn-lg"
+      >Shop Now</a
+    >
+  </div>
+</div>
+
+<!-- Optional: Add a Bootstrap Card Section -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1611095790444-1dfa35e37b52?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+          class="card-img-top"
+          alt="Commercial Refrigeration"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Commercial Refrigeration</h5>
+          <p class="card-text">
+            Discover our commercial refrigeration units for businesses.
+          </p>
+          <a href="#" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1611095790444-1dfa35e37b52?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+          class="card-img-top"
+          alt="Residential Refrigeration"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Residential Refrigeration</h5>
+          <p class="card-text">
+            Find the perfect refrigeration solutions for your home.
+          </p>
+          <a href="#" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1611095790444-1dfa35e37b52?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+          class="card-img-top"
+          alt="Maintenance Services"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Maintenance Services</h5>
+          <p class="card-text">
+            We provide expert maintenance and repair services.
+          </p>
+          <a href="#" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
